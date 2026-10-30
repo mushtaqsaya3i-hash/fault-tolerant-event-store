@@ -1,0 +1,37 @@
+schema_version = "1.4"
+artifacts = [
+    { source = "/app/cli.py" },
+    { source = "/app/event_store.py" },
+]
+
+[task]
+name = "mushtaq/event-store-recovery"
+version = "1.0.0"
+description = "Implement a durable append-only event store with crash recovery, torn-tail handling, and deterministic replay."
+authors = []
+keywords = []
+
+[metadata]
+difficulty = "medium"
+
+[verifier]
+timeout_sec = 600.0
+environment_mode = "separate"
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 72000.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+cpus = 2
+memory_mb = 4096
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]
